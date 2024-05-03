@@ -1,0 +1,432 @@
+/* Styles pour les images */
+.img-responsive {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.img-responsive:hover {
+    transform: scale(1.1);
+}
+
+.coverage-img {
+    width: 100%; /* Largeur maximale */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+}
+
+.coverage-img img {
+    width: 100%; /* Largeur maximale */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    display: block; /* Supprime les marges supplémentaires */
+}
+
+/* Styles pour les colonnes */
+.row {
+    margin-bottom: 20px;
+}
+
+/* Styles pour les animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+/* Styles pour la responsivité */
+@media (max-width: 576px) {
+    .mission, .objective, .particularity, .contact {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+       }
+       
+       .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       }
+       
+       .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+       }
+       
+       .dropdown-content a:hover {background-color: #f1f1f1}
+       
+       .dropdown:hover .dropdown-content {
+        display: block;
+       }
+       
+       .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+       }
+       
+}
+
+
+/* Styles généraux pour le formulaire */
+.contact {
+    background-color: #f8f9fa; /* Couleur de fond claire */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+/* Styles pour les titres */
+.heading {
+    color: #343a40; /* Couleur du texte */
+    font-size: 24px; /* Taille de la police */
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+/* Styles pour les champs de saisie et la zone de texte */
+.input-box input, .input-box textarea {
+    width: 100%; /* Largeur complète */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 10px; /* Marge en bas */
+    border: 1px solid #ced4da; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Styles pour le bouton de soumission */
+.btn {
+    background-color: #007bff; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Pointeur de curseur */
+    transition: background-color 0.3s ease; /* Transition */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+/* Styles pour les boîtes d'entrée */
+.input-box {
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+/* Styles pour centrer le conteneur au centre de la page */
+body {
+    align-items: center;
+    margin: 0; /* Supprimer les marges par défaut */
+    background-color: #f8f9fa; /* Couleur de fond pour le corps */
+}
+
+/* Styles pour centrer la colonne au centre de la page */
+.container-f {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Hauteur minimale de la fenêtre de visualisation */
+    padding: 20px; /* Espacement interne */
+    background-color: #f8f9fa; /* Couleur de fond pour le conteneur */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet aux éléments de se replier sur plusieurs lignes si nécessaire */
+    gap: 20px; /* Espacement entre les éléments de la colonne */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+/* Pour les écrans plus petits, ajustez la direction de flex pour les afficher en ligne */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+/* Styles pour le formulaire de contact et la localisation */
+.contact, .localisation {
+    flex: 1; /* Permet aux éléments de s'étirer pour occuper l'espace disponible */
+}
+
+/* Styles pour le formulaire de contact */
+.contact .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacement entre les champs du formulaire */
+}
+
+.contact .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacement entre les champs à l'intérieur d'une boîte d'entrée */
+}
+
+/* Styles pour la localisation */
+.localisation iframe {
+    width: 100%; /* Assure que l'iframe prend toute la largeur disponible */
+    height: 300px; /* Hauteur fixe pour l'iframe */
+}
+
+/* Styles généraux pour le formulaire */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacement entre les champs du formulaire */
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacement entre les champs à l'intérieur d'une boîte d'entrée */
+}
+
+/* Styles pour les champs de texte et le textarea */
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"],
+.form textarea {
+    width: 100%; /* Largeur maximale */
+    padding: 5px; /* Espacement à l'intérieur des champs */
+    border: 1px solid #ccc; /* Bordure */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+/* Styles pour le bouton de soumission */
+.form .btn {
+    width: 100%; /* Largeur maximale */
+    padding: 10px; /* Espacement à l'intérieur du bouton */
+    background-color: #007bff; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Pointeur de main lors du survol */
+}
+
+/* Styles pour rendre le formulaire responsive */
+@media (max-width: 768px) {
+    .form .input-box {
+        flex-direction: column; /* Les champs sont empilés verticalement sur les petits écrans */
+    }
+}
+
+
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background: #0b2b10;
+}
+
+/* Style pour le navbar */
+.navbar {
+    position: fixed; /* Fixe la position du navbar */
+    top: 0; /* Positionne le navbar en haut de la page */
+    left: 0; /* Positionne le navbar à gauche de la page */
+    width: 100%; /* Largeur maximale du navbar */
+    z-index: 1000; /* Assure que le navbar est au-dessus des autres éléments */
+}
+/* Supprimer les points de liste et aligner les éléments de la liste */
+.navbar .navbar-nav {
+    list-style-type: none; /* Supprime les points de liste */
+    display: flex; /* Utilise Flexbox pour l'alignement */
+    align-items: center; /* Aligne les éléments au centre */
+    justify-content: space-between; /* Espace les éléments uniformément */
+    padding: 20px; /* Supprime le padding par défaut */
+    margin-top: -20px; /* Supprime la marge par défaut */
+    background: #082e0ae1;
+}
+
+.navbar .navbar-nav .nav-item {
+    margin: 0 0; /* Ajoute une marge horizontale entre les éléments de la liste */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fdf9f9; /* Change la couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-size: 20px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #007bff; /* Change la couleur du texte des liens au survol */
+}
+
+/* Style général pour le jumbotron */
+.jumbotron {
+    margin-top: 80px;
+    position: relative; /* Permet de positionner le texte au-dessus de l'image */
+    overflow: hidden; /* Assure que le contenu ne dépasse pas le jumbotron */
+    background-color: #f8f9fa; /* Couleur de fond pour le jumbotron */
+    clip-path: polygon(0% 15%, 6% 3%, 25% 1%, 85% 0%, 100% 0, 100% 15%, 100% 73%, 96% 88%, 65% 100%, 30% 94%, 8% 95%, 0 70%);
+}
+
+/* Style pour le conteneur du texte */
+/* Style pour l'image */
+.coverage-img img {
+    width: 80%; /* Réduit la largeur de l'image */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    display: block; /* Assure que l'image est centrée correctement */
+}
+
+/* Style pour le texte */
+.coverage-content {
+    color: #333; /* Couleur du texte */
+    font-family: 'Arial', sans-serif; /* Police du texte */
+    font-size: 1.2rem; /* Taille de la police du texte */
+}
+
+.coverage-content h1 {
+    font-size: 3rem; /* Taille de la police pour le texte de la balise <h1> */
+    animation: fadeIn 2s ease-in-out; /* Animation de fondu */
+}
+
+/* Animation de fondu */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style pour les icônes sociaux */
+.social a img {
+    width: 24px; /* Largeur des icônes */
+    height: 24px; /* Hauteur des icônes */
+    margin-right: 10px; /* Marge à droite des icônes */
+}
+
+/* Style pour le bouton */
+.btn {
+    background-color: #007bff; /* Couleur de fond du bouton */
+    border-color: #007bff; /* Couleur de la bordure du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    text-decoration: none; /* Supprime le soulignement du texte */
+    display: inline-block; /* Permet de centrer le bouton */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+    border-color: #0056b3; /* Couleur de la bordure du bouton au survol */
+}
+
+
+.btn:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+    border-color: #0056b3; /* Couleur de la bordure du bouton au survol */
+}
+
+/* Style pour les sections colonnées */
+.container-f .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-f .row > div {
+    flex: 1 0 20%; /* Permet de s'adapter à la taille de la fenêtre */
+    margin: 10px;
+}
+
+.mission, .objective, .particularity {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.mission .heading, .objective .heading, .particularity .heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mission p, .objective p, .particularity p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.mission .btn, .objective .btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+/* Media query pour la responsivité */
+@media (max-width: 768px) {
+    .container-f .row > div {
+        flex: 1 0 45%; /* Réduit la taille des colonnes sur les petits écrans */
+    }
+}
+
+@media (max-width: 576px) {
+    .container-f .row > div {
+        flex: 1 0 100%; /* Les colonnes prennent toute la largeur sur les très petits écrans */
+    }
+}
+
+
+/* Style pour le footer */
+footer {
+    background-color: #f8f9fa; /* Couleur de fond du footer */
+    padding: 20px 0; /* Espacement interne du footer */
+}
+
+/* Style pour le conteneur des icônes sociaux */
+.social {
+    display: flex; /* Utilise Flexbox pour l'alignement */
+    justify-content: center; /* Centre les icônes horizontalement */
+    align-items: center; /* Centre les icônes verticalement */
+    flex-wrap: wrap; /* Permet aux icônes de se replier sur plusieurs lignes si nécessaire */
+    gap: 20px; /* Espacement entre les icônes */
+}
+
+/* Style pour les icônes sociaux */
+.social a img {
+    width: 24px; /* Largeur des icônes */
+    height: 24px; /* Hauteur des icônes */
+}
+
+/* Style pour la carte */
+map[name="carteFrance"] {
+    display: block; /* Assure que la carte est affichée comme un bloc */
+    margin: 20px auto; /* Centre la carte horizontalement */
+    width: 100%; /* Largeur maximale */
+    max-width: 600px; /* Largeur maximale pour la carte */
+}
+
+.container {
+    display: flex; /* Rend le conteneur un conteneur Flexbox */
+    justify-content: space-between; /* Espace les éléments enfants uniformément dans le conteneur */
+}
+
+.contact, .localisation {
+    flex: 1; /* Les deux parties occupent un espace égal dans le conteneur */
+    padding: 20px; /* Ajoute un peu de marge intérieure pour une meilleure lisibilité */
+}
+
+/* Si vous souhaitez spécifier une largeur pour les parties */
+.contact {
+    flex: 0 0 45%; /* Largeur spécifique pour le contact */
+}
+
+.localisation {
+    flex: 0 0 45%; /* Largeur spécifique pour la localisation */
+} 
