@@ -1,9 +1,25 @@
+html{
+    scroll-behavior: smooth;
+}
+ #buttoon{
+    background-color: #fdad6e!important; /* Couleur de fond */
+
+ }
+ #buttoon:hover{
+    background-color: #431007!important;
+
+ }
+  a>img{
+    width: 5%;
+    height: 7vh;
+  }
 /* Styles pour les images */
 .img-responsive {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
+
 
 .img-responsive:hover {
     transform: scale(1.1);
@@ -104,7 +120,7 @@
 
 /* Styles pour le bouton de soumission */
 .btn {
-    background-color: #007bff; /* Couleur de fond */
+    background-color: #fdad6e; /* Couleur de fond */
     color: white; /* Couleur du texte */
     padding: 10px 20px; /* Espacement interne */
     border: none; /* Pas de bordure */
@@ -114,7 +130,7 @@
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Couleur de fond au survol */
+    background-color: #431007; /* Couleur de fond au survol */
 }
 
 /* Styles pour les boîtes d'entrée */
@@ -239,6 +255,11 @@ body {
     left: 0; /* Positionne le navbar à gauche de la page */
     width: 100%; /* Largeur maximale du navbar */
     z-index: 1000; /* Assure que le navbar est au-dessus des autres éléments */
+    
+
+}
+.coverage-content h1{
+    color: #f96316;
 }
 /* Supprimer les points de liste et aligner les éléments de la liste */
 .navbar .navbar-nav {
@@ -248,7 +269,9 @@ body {
     justify-content: space-between; /* Espace les éléments uniformément */
     padding: 20px; /* Supprime le padding par défaut */
     margin-top: -20px; /* Supprime la marge par défaut */
-    background: #082e0ae1;
+    background: rgba(255, 255, 255, 0.2); /* Transparence */
+    backdrop-filter: blur(10px); /* Flou d'arrière-plan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
 }
 
 .navbar .navbar-nav .nav-item {
@@ -385,8 +408,11 @@ body {
 
 /* Style pour le footer */
 footer {
-    background-color: #f8f9fa; /* Couleur de fond du footer */
-    padding: 20px 0; /* Espacement interne du footer */
+    margin-top: 5%;
+    background: linear-gradient(to right, #283c86, #45a247);
+    height: 25vh;
+    border-top-left-radius: 150px;
+
 }
 
 /* Style pour le conteneur des icônes sociaux */
